@@ -15,7 +15,7 @@ $ sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl 
 ```bash
 $ mkdir ~/bin
 $ PATH=~/bin:$PATH
-$ curl -sSL 'https://gerrit-googlesource.proxy.ustclug.org/git-repo/+/master/repo?format=TEXT' | base64 -d > ~/bin/repo
+$ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 $ chmod a+x ~/bin/repo
 ```
 
@@ -24,13 +24,13 @@ $ chmod a+x ~/bin/repo
 The source code can download either from https://android.googlesource.com or https://lug.ustc.edu.cn/wiki/mirrors/help/aosp
 Run following command to download from ustc.edu.cn
 ```bash
-$ repo init -u git://mirrors.ustc.edu.cn/aosp/platform/manifest -b android-9.0.0_r8 --repo-url=git://mirrors.ustc.edu.cn/aosp/tools/repo
+$ repo init -u https://android.googlesource.com/platform/manifest -b android-9.0.0_r8
 ```
 
 2. Download Raspbery Pi 3 device configuration files
 ```bash
 $ mkdir -pv device/brobwind
-$ git clone git://github.com/brobwind/pie-device-brobwind-rpi3 device/brobwind/rpi3
+$ git clone git://github.com/metaa/pie-device-brobwind-rpi3 device/brobwind/rpi3
 ```
 
 3. Add local manifest file
